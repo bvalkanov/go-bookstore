@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
@@ -16,4 +17,6 @@ func main() {
 	http.Handle("/", r)
 
 	log.Fatal(http.ListenAndServe("localhost:9010", r))
+
+	fmt.Println("Listening on port 9010")
 }
